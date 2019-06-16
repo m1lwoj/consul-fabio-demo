@@ -29,10 +29,7 @@ namespace PR.Car.Rentals
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvcCore()
-                .AddJsonFormatters()
-                .AddDataAnnotations()
-                .AddApiExplorer().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
            
             ApplicationLogging.RegisterFactory(_logFactory);
 
